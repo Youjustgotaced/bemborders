@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Foundry</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <div>
+          <h1>Foundry</h1>
+          <p>Minimal startup workflow runner using your installed <code>codex</code> or <code>claude</code> CLI.</p>
+        </div>
+        <button id="seedButton" class="secondary">Reseed Startup Files</button>
+      </header>
+
+      <section class="panel">
+        <label class="field">
+          <span>Path</span>
+          <select id="pipelineInput"></select>
+        </label>
+        <label class="field">
+          <span>Workspace</span>
+          <input id="cwdInput" type="text" />
+        </label>
+        <label class="field">
+          <span>Provider</span>
+          <select id="providerInput">
+            <option value="codex">Codex</option>
+            <option value="claude">Claude</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Model</span>
+          <input id="modelInput" type="text" placeholder="Leave blank to use provider default" />
+        </label>
+        <label class="checkbox">
+          <input id="searchInput" type="checkbox" checked />
+          <span>Enable Codex web search tool for this run</span>
+        </label>
+      </section>
+
+      <section class="panel">
+        <h2>Startup Stages</h2>
+        <div id="stageButtons" class="stage-board"></div>
+        <div id="stageMeta" class="stage-meta"></div>
+        <div class="stage-meta-actions">
+          <button id="overrideGateButton" class="secondary" hidden>Override Gate</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <label class="field">
+          <span>Prompt</span>
+          <textarea id="promptInput" rows="9"></textarea>
+        </label>
+        <div class="actions">
+          <button id="runButton" class="primary">Run</button>
+          <button id="stopButton" class="secondary" disabled>Clear Output</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="output-header">
+          <div class="output-heading">
+            <h2>Run Output</h2>
+            <div id="statusDetail" class="status-detail"></div>
+          </div>
+          <span id="statusPill" class="status idle">Idle</span>
+        </div>
+        <div id="output" class="output-feed"></div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+  </html>

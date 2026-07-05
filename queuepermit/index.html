@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>QueuePermit | Every permit path, one operating queue.</title>
+    <meta
+      name="description"
+      content="QueuePermit is a design-partner proof sprint for California residential solar permit teams that need one operating queue across mixed AHJ workflows."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" aria-label="Primary navigation">
+      <a class="brand-mark" href="#top" aria-label="QueuePermit home">
+        <span class="brand-sigil" aria-hidden="true">QP</span>
+        <span>
+          <strong>QueuePermit</strong>
+          <small>Every permit path, one operating queue.</small>
+        </span>
+      </a>
+      <nav class="desktop-nav" aria-label="Page sections">
+        <a href="#queue">Queue</a>
+        <a href="#scope">Scope</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#pilot">Pilot</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="button button-small button-primary" href="#pilot" data-track="primary_cta_click">Start a 90-day pilot</a>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero-section">
+        <div class="hero-copy">
+          <p class="eyebrow">California residential solar permit ops</p>
+          <h1>Know every permit status before the install schedule slips.</h1>
+          <p class="hero-lede">
+            QueuePermit gives permitting teams one operating queue for mixed AHJ workflows:
+            SolarAPP+, Symbium, portals, email/PDF submissions, and external-owner permit work.
+          </p>
+          <p class="scope-strip">
+            Post-design permit operations for launch corridors. No permit submission. No plan generation. No staffed expediting.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#pilot" data-track="primary_cta_click">Start a 90-day pilot</a>
+            <a class="button button-secondary" href="#queue" data-track="secondary_cta_click">See the permit queue</a>
+          </div>
+          <div class="evidence-chip">
+            <span class="chip-dot"></span>
+            Public context supports the mixed-mode market; QueuePermit demand is being tested through design-partner pilots.
+          </div>
+        </div>
+
+        <section id="queue" class="permit-console" aria-label="Illustrative QueuePermit product queue">
+          <div class="console-topline">
+            <div>
+              <p class="console-label">This week's permit review</p>
+              <h2>Mixed-path queue</h2>
+            </div>
+            <span class="stamp">Illustrative; buyer artifact pending</span>
+          </div>
+
+          <div class="kpi-strip" aria-label="Illustrative queue metrics">
+            <article><span>Active rows</span><strong>42</strong></article>
+            <article><span>Median ready-to-approved</span><strong>19d</strong></article>
+            <article><span>Revision rate</span><strong>31%</strong></article>
+            <article><span>Aged &gt; SLA</span><strong>9</strong></article>
+            <article><span>External-owner overdue</span><strong>3</strong></article>
+          </div>
+
+          <div class="filter-rail" aria-label="Saved filters">
+            <button class="filter-pill active" type="button" aria-pressed="true">All active</button>
+            <button class="filter-pill" type="button" aria-pressed="false">Aged &gt; SLA</button>
+            <button class="filter-pill" type="button" aria-pressed="false">Revision requested</button>
+            <button class="filter-pill" type="button" aria-pressed="false">External owner</button>
+            <button class="filter-pill" type="button" aria-pressed="false">SolarAPP+ exceptions</button>
+            <button class="filter-pill" type="button" aria-pressed="false">This week's review</button>
+          </div>
+
+          <div class="queue-layout">
+            <div class="queue-table-wrap">
+              <table class="queue-table">
+                <thead>
+                  <tr>
+                    <th>AHJ</th>
+                    <th>Submission mode</th>
+                    <th>Owner</th>
+                    <th>Status</th>
+                    <th>Age</th>
+                    <th>Blocker</th>
+                    <th>Due</th>
+                    <th>Next action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>LADBS</td>
+                    <td>AHJ portal</td>
+                    <td>Maya R.</td>
+                    <td><span class="status waiting">Waiting on AHJ</span></td>
+                    <td class="numeric">18d</td>
+                    <td>inspection-card question</td>
+                    <td>Thu</td>
+                    <td>call portal contact; update note</td>
+                  </tr>
+                  <tr class="row-selected">
+                    <td>San Diego City</td>
+                    <td>SolarAPP+ exception</td>
+                    <td>Luis M.</td>
+                    <td><span class="status revision">Revision requested</span></td>
+                    <td class="numeric">6d</td>
+                    <td>structural calc mismatch</td>
+                    <td>Today</td>
+                    <td>confirm corrected sheet uploaded</td>
+                  </tr>
+                  <tr>
+                    <td>Riverside County</td>
+                    <td>External owner</td>
+                    <td>Vendor</td>
+                    <td><span class="status external">Waiting on vendor</span></td>
+                    <td class="numeric alert">11d overdue</td>
+                    <td>owner response missing</td>
+                    <td>Fri</td>
+                    <td>escalate with permit packet ID</td>
+                  </tr>
+                  <tr>
+                    <td>Orange County portal</td>
+                    <td>Email/PDF</td>
+                    <td>Priya S.</td>
+                    <td><span class="status internal">Waiting internal</span></td>
+                    <td class="numeric">4d</td>
+                    <td>missing battery spec</td>
+                    <td>Wed</td>
+                    <td>request revised cut sheet</td>
+                  </tr>
+                  <tr>
+                    <td>San Bernardino County</td>
+                    <td>Symbium</td>
+                    <td>Chen L.</td>
+                    <td><span class="status approved">Approved</span></td>
+                    <td class="numeric">2d</td>
+                    <td>none</td>
+                    <td>Done</td>
+                    <td>archive approval; notify install ops</td>
+                  </tr>
+                </tbody>
+            </table>
+              <div class="mobile-queue-cards" aria-label="Mobile queue cards">
+                <article class="mobile-row-card">
+                  <span class="status waiting">Waiting on AHJ</span>
+                  <h3>LADBS</h3>
+                  <dl>
+                    <div><dt>Submission mode</dt><dd>AHJ portal</dd></div>
+                    <div><dt>Age</dt><dd>18d</dd></div>
+                    <div><dt>Owner</dt><dd>Maya R.</dd></div>
+                    <div><dt>Blocker</dt><dd>inspection-card question</dd></div>
+                    <div><dt>Due</dt><dd>Thu</dd></div>
+                    <div><dt>Next action</dt><dd>call portal contact; update note</dd></div>
+                  </dl>
+                  <button class="row-toggle" type="button" aria-expanded="false">Expand row</button>
+                </article>
+                <article class="mobile-row-card selected">
+                  <span class="status revision">Revision requested</span>
+                  <h3>San Diego City</h3>
+                  <dl>
+                    <div><dt>Submission mode</dt><dd>SolarAPP+ exception</dd></div>
+                    <div><dt>Age</dt><dd>6d</dd></div>
+                    <div><dt>Owner</dt><dd>Luis M.</dd></div>
+                    <div><dt>Blocker</dt><dd>structural calc mismatch</dd></div>
+                    <div><dt>Due</dt><dd>Today</dd></div>
+                    <div><dt>Next action</dt><dd>confirm corrected sheet uploaded</dd></div>
+                  </dl>
+                  <button class="row-toggle" type="button" aria-expanded="false">Expand row</button>
+                </article>
+                <article class="mobile-row-card">
+                  <span class="status external">Waiting on vendor</span>
+                  <h3>Riverside County</h3>
+                  <dl>
+                    <div><dt>Submission mode</dt><dd>External owner</dd></div>
+                    <div><dt>Age</dt><dd>11d overdue</dd></div>
+                    <div><dt>Owner</dt><dd>Vendor</dd></div>
+                    <div><dt>Blocker</dt><dd>owner response missing</dd></div>
+                    <div><dt>Due</dt><dd>Fri</dd></div>
+                    <div><dt>Next action</dt><dd>escalate with permit packet ID</dd></div>
+                  </dl>
+                  <button class="row-toggle" type="button" aria-expanded="false">Expand row</button>
+                </article>
+              </div>
+            </div>
+
+            <aside class="case-panel" aria-label="Selected permit detail">
+              <p class="panel-kicker">Selected row</p>
+              <h3>Revision requested - San Diego City</h3>
+              <dl>
+                <div><dt>Permit path</dt><dd>SolarAPP+ exception</dd></div>
+                <div><dt>Correction category</dt><dd>Structural calc mismatch</dd></div>
+                <div><dt>Received</dt><dd>May 6</dd></div>
+                <div><dt>Resubmitted</dt><dd>Pending</dd></div>
+                <div><dt>Repeat-AHJ flag</dt><dd>2 similar revision requests in last 30 days</dd></div>
+                <div><dt>Owner</dt><dd>Luis M.</dd></div>
+              </dl>
+              <p class="next-action">Next action: confirm corrected sheet uploaded today.</p>
+              <small>Illustrative note - buyer artifact pending.</small>
+            </aside>
+          </div>
+        </section>
+      </section>
+
+      <section class="problem-section">
+        <div class="section-heading">
+          <p class="eyebrow">The weekly review problem</p>
+          <h2>The status truth lives in too many places.</h2>
+        </div>
+        <div class="source-map" aria-label="Fragmented permit sources">
+          <span>SolarAPP+</span>
+          <span>Symbium</span>
+          <span>AHJ portal</span>
+          <span>Email/PDF</span>
+          <span>CRM</span>
+          <span>Spreadsheet</span>
+          <span>External owner</span>
+        </div>
+        <div class="problem-grid">
+          <article>
+            <strong>Aged rows drift</strong>
+            <p>Permit managers need stale jobs visible before they affect install readiness.</p>
+          </article>
+          <article>
+            <strong>Revision loops lose shape</strong>
+            <p>Category, received date, resubmitted date, and repeat-AHJ patterns often disappear from the review rhythm.</p>
+          </article>
+          <article>
+            <strong>External-owner work arrives late</strong>
+            <p>Vendor-owned rows can sit outside the team queue until the schedule is already exposed.</p>
+          </article>
+          <article>
+            <strong>Generic stages miss the permit job</strong>
+            <p>CRM fields rarely enforce owner, blocker reason, due date, and next action at permit-review granularity.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="scope" class="solution-section">
+        <div class="section-heading">
+          <p class="eyebrow">V1 operating record</p>
+          <h2>One queue after design approval. Deliberately narrow.</h2>
+        </div>
+        <div class="scope-board">
+          <article class="scope-card include">
+            <h3>QueuePermit tracks</h3>
+            <ul>
+              <li>AHJ, submission mode, owner, status, age, blocker, due date, next action.</li>
+              <li>Revision category, received date, resubmitted date, repeat-AHJ flag.</li>
+              <li>AHJ notes approved by the permit manager.</li>
+              <li>Weekly KPIs: median ready-to-approved, revision rate, aged jobs, unknown owner/blocker rate.</li>
+            </ul>
+          </article>
+          <article class="scope-card exclude">
+            <h3>QueuePermit does not</h3>
+            <ul>
+              <li>Submit permits or call AHJs for you.</li>
+              <li>Generate plan sets, automate PTO, or dispatch inspections.</li>
+              <li>Replace SolarAPP+, Symbium, CRMs, or design tools.</li>
+              <li>Claim faster approvals, ROI, paid pilots, or validated demand.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow-section">
+        <div class="section-heading">
+          <p class="eyebrow">90-day proof sprint</p>
+          <h2>Run the pilot around your real weekly permit review.</h2>
+        </div>
+        <ol class="workflow-steps">
+          <li><span>01</span><strong>Import</strong><p>Start with 30-60 active or recent post-design jobs.</p></li>
+          <li><span>02</span><strong>Pick AHJs</strong><p>Choose 8-10 recurring launch-corridor AHJs.</p></li>
+          <li><span>03</span><strong>Normalize</strong><p>Assign status, owner, blocker, due date, revision state, and next action.</p></li>
+          <li><span>04</span><strong>Review</strong><p>Inspect aged rows, missing owners, revision loops, AHJ patterns, and vendor stalls.</p></li>
+          <li><span>05</span><strong>Decide</strong><p>Convert only if the queue becomes the weekly operating cadence.</p></li>
+        </ol>
+      </section>
+
+      <section id="evidence" class="evidence-section">
+        <div class="section-heading">
+          <p class="eyebrow">Evidence boundary</p>
+          <h2>The market is software-mediated. QueuePermit is testing the operating layer.</h2>
+        </div>
+        <div class="evidence-grid">
+          <article>
+            <span class="evidence-label">Confirmed public context</span>
+            <p>California automated-permitting context, SolarAPP+ and Symbium pricing, and adjacent permit-tracking vendors support market timing and category literacy.</p>
+          </article>
+          <article>
+            <span class="evidence-label hypothesis">Still a hypothesis</span>
+            <p>Queue-only willingness to pay, buyer urgency, baseline data access, and weekly usage must be proven through design-partner pilots.</p>
+          </article>
+        </div>
+        <div class="source-chips" aria-label="Public context sources">
+          <a href="https://help.gosolarapp.org/article/75-how-much-does-solarapp-cost-an-installer-to-use" target="_blank" rel="noreferrer">SolarAPP+ pricing - Apr 1, 2026 <span>context only</span></a>
+          <a href="https://research-hub.nlr.gov/en/publications/solarapp-performance-review-2024-data-2/" target="_blank" rel="noreferrer">NLR review - 2024 data, published 2026 <span>context only</span></a>
+          <a href="https://www.energy.ca.gov/programs-and-topics/programs/residential-solar-permit-reporting-program-sb-379/residential-solar" target="_blank" rel="noreferrer">CEC dashboard - data updated May 6, 2026 <span>context only</span></a>
+          <a href="https://symbium.com/pricing/" target="_blank" rel="noreferrer">Symbium pricing <span>context only</span></a>
+          <a href="https://www.instapermit.com/" target="_blank" rel="noreferrer">InstaPermit <span>vendor context only</span></a>
+          <a href="https://www.planedgepermits.com/" target="_blank" rel="noreferrer">PlanEdge <span>vendor context only</span></a>
+        </div>
+        <p class="maintenance-note">Sources were spot-checked on May 12, 2026. Refresh dated public-context claims before external launch if published after that date.</p>
+      </section>
+
+      <section id="pilot" class="pilot-section">
+        <div class="pilot-copy">
+          <p class="eyebrow">Pilot intake</p>
+          <h2>If your permit review still starts with a status hunt, bring the queue.</h2>
+          <p>
+            QueuePermit is accepting a small number of California residential solar design partners for a 90-day proof sprint.
+            The first conversation is not a generic demo; it starts with whether your active queue can support a measurable operating proof.
+          </p>
+          <ul class="checklist">
+            <li>Permit manager named</li>
+            <li>Operations approver named</li>
+            <li>Baseline queue available</li>
+            <li>8-10 launch AHJs selected</li>
+            <li>Weekly review scheduled</li>
+            <li>Conversion or kill criteria agreed</li>
+          </ul>
+        </div>
+
+        <form class="pilot-form" id="pilotForm" novalidate>
+          <div class="form-status disabled" id="formStatus" role="status" aria-live="polite">Pilot intake is not open yet.</div>
+          <p class="preview-note" id="previewHelp">Live submissions are disabled until privacy policy, inbox, storage, notifications, and rate limits are verified. You can still preview local routing without sending data anywhere.</p>
+          <div class="field-grid">
+            <label>
+              <span>Work email</span>
+              <input name="email" type="email" autocomplete="email" required placeholder="maya@installer.com" aria-describedby="emailHelp" />
+              <small id="emailHelp">Use your company email so we can route the pilot request correctly.</small>
+            </label>
+            <label>
+              <span>Company name</span>
+              <input name="company" type="text" autocomplete="organization" required placeholder="Southern Sun Ops" />
+            </label>
+            <label>
+              <span>Role</span>
+              <select name="role" required>
+                <option value="">Select role</option>
+                <option>Permit Manager</option>
+                <option>Manager of Permitting</option>
+                <option>Director / Head of Residential Operations</option>
+                <option>Founder / GM</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              <span>California service area</span>
+              <input name="area" type="text" required placeholder="Los Angeles, Orange, Riverside" />
+            </label>
+            <label>
+              <span>Active or recent post-design jobs</span>
+              <select name="jobs" required>
+                <option value="">Select volume</option>
+                <option>&lt;30</option>
+                <option>30-60</option>
+                <option>61-150</option>
+                <option>150+</option>
+              </select>
+            </label>
+            <label>
+              <span>Recurring AHJs in last 90 days</span>
+              <select name="ahjs" required>
+                <option value="">Select AHJs</option>
+                <option>&lt;5</option>
+                <option>5-7</option>
+                <option>8-10</option>
+                <option>11+</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset>
+            <legend>Current tracker stack</legend>
+            <div class="checkbox-grid">
+              <label class="choice-pill"><input type="checkbox" name="stack" value="SolarAPP+" /><span>SolarAPP+</span></label>
+              <label class="choice-pill"><input type="checkbox" name="stack" value="Symbium" /><span>Symbium</span></label>
+              <label class="choice-pill"><input type="checkbox" name="stack" value="AHJ portals" /><span>AHJ portals</span></label>
+              <label class="choice-pill"><input type="checkbox" name="stack" value="email/PDF" /><span>email/PDF</span></label>
+              <label class="choice-pill"><input type="checkbox" name="stack" value="CRM" /><span>CRM</span></label>
+              <label class="choice-pill"><input type="checkbox" name="stack" value="spreadsheet" /><span>spreadsheet</span></label>
+              <label class="choice-pill"><input type="checkbox" name="stack" value="external vendor" /><span>external vendor</span></label>
+            </div>
+          </fieldset>
+
+          <div class="field-grid three">
+            <label>
+              <span>Baseline export available?</span>
+              <select name="baseline" required><option>Yes</option><option>Not yet</option><option>No</option></select>
+            </label>
+            <label>
+              <span>Named permit manager?</span>
+              <select name="manager" required><option>Yes</option><option>Not yet</option><option>No</option></select>
+            </label>
+            <label>
+              <span>Operations approver?</span>
+              <select name="approver" required><option>Yes</option><option>Not yet</option><option>No</option></select>
+            </label>
+          </div>
+
+          <label>
+            <span>What is breaking in the weekly permit review?</span>
+            <textarea name="issue" required rows="4" placeholder="Stale rows, unknown blockers, revision loops, external-owner work, AHJ patterns..." aria-describedby="issueHelp"></textarea>
+            <small id="issueHelp">Mention stale rows, unknown owners, blocker reasons, revision loops, external-owner work, AHJ patterns, or weekly KPI reporting.</small>
+          </label>
+
+          <label class="scope-ack choice-pill">
+            <input name="scope" type="checkbox" required />
+            <span>I understand QueuePermit v1 tracks post-design permit operations only. It does not submit permits, generate plan sets, automate PTO, provide staffed expediting, or maintain nationwide AHJ intelligence.</span>
+          </label>
+
+          <div class="form-actions">
+            <button class="button button-disabled" type="submit" disabled aria-describedby="formStatus">Request pilot review</button>
+            <button class="button button-secondary" id="previewRoutingButton" type="button">Preview routing locally</button>
+          </div>
+          <p class="privacy-note">Do not upload homeowner personal information, plan sets, utility account numbers, permit numbers, or confidential customer documents.</p>
+        </form>
+      </section>
+
+      <section id="faq" class="faq-section">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions permit managers should ask before a pilot.</h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Does QueuePermit submit permits?</summary>
+            <p>No. QueuePermit tracks post-design permit operations across the paths your team already uses.</p>
+          </details>
+          <details>
+            <summary>Is this a replacement for SolarAPP+ or Symbium?</summary>
+            <p>No. If a job qualifies for an instant permit path, use it. QueuePermit helps the permit team see the whole mixed queue.</p>
+          </details>
+          <details>
+            <summary>Is this a CRM?</summary>
+            <p>No. QueuePermit is narrower than a CRM and more permit-specific than a generic board.</p>
+          </details>
+          <details>
+            <summary>What outcomes can we expect?</summary>
+            <p>The pilot measures queue quality and operating cadence first. QueuePermit does not promise guaranteed approval speed.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>QueuePermit</strong>
+        <p>Every permit path, one operating queue.</p>
+      </div>
+      <p>Tracks post-design permit operations. Does not submit, generate plans, automate PTO, replace instant-permit tools, or staff expediting.</p>
+      <a href="./deck.html">View proof-sprint deck</a>
+    </footer>
+
+    <div class="mobile-cta" aria-label="Mobile quick actions">
+      <a class="button button-primary" href="#pilot">Start pilot</a>
+      <a class="button button-secondary" href="#queue">Queue</a>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
